@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms & Conditions | RENTREV</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-image: url('https://images.unsplash.com/photo-1493238792000-8113da705763?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            color: #333;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            z-index: 1;
+        }
+
+        header {
+            background-color: #230e81;
+            color: white;
+            padding: 0.50rem 0;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img{
+            height: 60px;
+            width: 60px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 1rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            padding: 0.5rem;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #D9D6FF;
+        }
+
+        main {
+            flex: 1;
+            position: relative;
+            z-index: 2;
+            padding: 4rem 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 30px rgba(0,0,0,0.1);
+            padding: 3rem;
+            border-top: 5px solid #230e81;
+        }
+
+        h1 {
+            color: #230e81;
+            margin-bottom: 2rem;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        h2 {
+            color: #230e81;
+            margin: 2rem 0 1rem;
+            font-size: 1rem;
+        }
+
+        p, li {
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        ul {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .last-updated {
+            font-style: italic;
+            color: #666;
+            text-align: right;
+            margin-top: 2rem;
+        }
+
+        footer {
+            background-color: #230e81;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            margin: 1rem 0;
+        }
+
+        .social-links a {
+            color: white;
+            margin: 0 1rem;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #ffcc00;
+        }
+
+        .copyright {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.7);
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo"><img src="images/RentRev.png"></a>
+            <nav>
+                <ul>
+                    <li><a href="fleet.html">Fleet</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="contactus.html">Contact</a></li>
+                    <li><a href="signup.html">signup</a></li>
+                    <li><a href="login.html">Log in</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>Terms & Conditions</h1>
+            
+            <p>Welcome to RENTREV. By accessing our services, you agree to comply with and be bound by the following terms and conditions.</p>
+            
+            <h2>1. Rental Agreement</h2>
+            <p>The rental agreement begins at the time of vehicle pickup and ends when the vehicle is returned to RENTREV.</p>
+            <ul>
+                <li>Renters must be at least 21 years old with a valid driver's license.</li>
+                <li>A security deposit is required for all rentals.</li>
+                <li>Mileage limits apply as specified in your rental agreement.</li>
+            </ul>
+            
+            <h2>2. Payment & Fees</h2>
+            <p>All rentals are subject to the following payment terms:</p>
+            <ul>
+                <li>Full payment is due at the time of vehicle pickup.</li>
+                <li>Late returns will incur additional charges (1.5x the daily rate).</li>
+                <li>Cleaning fees may apply if the vehicle is returned excessively dirty.</li>
+            </ul>
+            
+            <h2>3. Cancellation Policy</h2>
+            <p>Cancellations made:</p>
+            <ul>
+                <li>More than 48 hours before pickup: Full refund</li>
+                <li>24-48 hours before pickup: 50% refund</li>
+                <li>Less than 24 hours before pickup: No refund</li>
+            </ul>
+            
+            <h2>4. Prohibited Uses</h2>
+            <p>The following uses of our vehicles are strictly prohibited:</p>
+            <ul>
+                <li>Off-road driving</li>
+                <li>Transporting illegal substances</li>
+                <li>Racing or reckless driving</li>
+                <li>Subleasing the vehicle</li>
+            </ul>
+            
+            <h2>5. Liability</h2>
+            <p>RENTREV is not liable for:</p>
+            <ul>
+                <li>Personal belongings left in the vehicle</li>
+                <li>Traffic violations incurred during the rental period</li>
+                <li>Mechanical failures due to renter misuse</li>
+            </ul>
+            
+            <p class="last-updated">Last Updated: January 15, 2023</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <p>RENTREV - Revolutionizing Your Rental Experience</p>
+            <p class="copyright">© 2023 RENTREV. All rights reserved. <a href="privacy.html" style="color: #ffcc00;">Privacy Policy</a></p>
+        </div>
+    </footer>
+</body>
+</html>

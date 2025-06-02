@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-image: url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1283&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            color: #333;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            z-index: 1;
+        }
+
+        header {
+            background-color: #2A007F;
+            color: white;
+            padding: 0  .50rem 0;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img{
+            height: 60px;
+            width: 60px;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 1rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            padding: 0.5rem;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #D9D6FF;
+        }
+
+        main {
+            flex: 1;
+            position: relative;
+            z-index: 2;
+            padding: 4rem 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 30px rgba(0,0,0,0.1);
+            padding: 3rem;
+            border-top: 5px solid #2A007F;
+        }
+
+        h1 {
+            color: #2A007F;
+            margin-bottom: 2rem;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        h2 {
+            color: #2A007F;
+            margin: 2rem 0 1rem;
+            font-size: 1rem;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .mission-section {
+            background-color: #f8f7ff;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border-left: 4px solid #2A007F;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .value-card {
+            background-color: #f8f7ff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .value-card h3 {
+            color: #2A007F;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .value-card h3 svg {
+            margin-right: 0.5rem;
+            color: #D9D6FF;
+        }
+
+        .team-section {
+            margin-top: 3rem;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .team-member {
+            text-align: center;
+        }
+
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #2A007F;
+            margin-bottom: 1rem;
+        }
+
+        .team-member h4 {
+            color: #2A007F;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-member p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .cta-section {
+            text-align: center;
+            margin-top: 4rem;
+            padding: 2rem;
+            background-color: #2A007F;
+            color: white;
+            border-radius: 8px;
+        }
+
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #D9D6FF;
+            color: #2A007F;
+            padding: 0.8rem 2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #D9D6FF;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background-color: #2A007F;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            margin: 1rem 0;
+        }
+
+        .social-links a {
+            color: white;
+            margin: 0 1rem;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #D9D6FF;
+        }
+
+        .copyright {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.7);
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo"><img src="images/RentRev.png"></a>
+            <nav>
+                <ul>
+                    <li><a href="fleet.html">Vehicles</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="aboutus.html" class="active">About Us</a></li>
+                    <li><a href="contactus.html">Contact</a></li>
+                    <li><a href="signup.html">signup</a></li>
+                    <li><a href="login.html">Log in</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>About RENTREV</h1>
+            
+            <p>Welcome to RENTREV, your premier car rental service dedicated to revolutionizing your travel experience. Since our founding in 2020, we've been committed to providing exceptional vehicles and unparalleled customer service to travelers around the world.</p>
+            
+            <div class="mission-section">
+                <h2>Our Mission</h2>
+                <p>At RENTREV, we believe that every journey should begin with comfort, style, and reliability. Our mission is to transform ordinary trips into extraordinary experiences by offering a diverse fleet of well-maintained vehicles, transparent pricing, and personalized service that puts our customers first.</p>
+            </div>
+            
+            <h2>Our Story</h2>
+            <p>Founded by a team of automotive enthusiasts and travel experts, RENTREV began with a simple idea: to create a car rental service that truly understands the needs of modern travelers. What started as a small fleet of 10 vehicles in one city has grown into a nationwide network with over 500 vehicles across 25 locations.</p>
+            
+            <h2>Our Values</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <h3><i class="fas fa-shield-alt"></i> Reliability</h3>
+                    <p>Every vehicle in our fleet undergoes rigorous maintenance checks to ensure your safety and peace of mind on the road.</p>
+                </div>
+                <div class="value-card">
+                    <h3><i class="fas fa-hand-holding-heart"></i> Customer Focus</h3>
+                    <p>Your satisfaction is our top priority. Our team goes above and beyond to meet your needs and exceed your expectations.</p>
+                </div>
+                <div class="value-card">
+                    <h3><i class="fas fa-leaf"></i> Sustainability</h3>
+                    <p>We're committed to reducing our environmental impact through eco-friendly vehicles and sustainable business practices.</p>
+                </div>
+                <div class="value-card">
+                    <h3><i class="fas fa-lightbulb"></i> Innovation</h3>
+                    <p>We continuously evolve our services and technology to provide you with the most convenient rental experience.</p>
+                </div>
+            </div>
+            
+            <h2>Our Team</h2>
+            <p>The RENTREV difference comes from our people. Meet the dedicated professionals who make your rental experience exceptional:</p>
+            
+            <div class="team-section">
+                <div class="team-grid">
+                    <div class="team-member">
+                        <h4>Zyad</h4>
+                        <p>CEO & Founder</p>
+                    </div>
+                    <div class="team-member">
+                        <h4>Saed</h4>
+                        <p>Operations Director</p>
+                    </div>
+                    <div class="team-member">
+                        <h4>Mazen</h4>
+                        <p>Customer Experience Manager</p>
+                    </div>
+                    <div class="team-member">
+                        <h4>Ahmed</h4>
+                        <p>Fleet Maintenance Director</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cta-section">
+                <h2>Ready to Experience the RENTREV Difference?</h2>
+                <p>Join thousands of satisfied customers who have discovered the joy of premium car rental service.</p>
+                <a href="#" class="btn">Book Your Vehicle Now</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <p>RENTREV - Revolutionizing Your Rental Experience</p>
+            <p class="copyright">© 2023 RENTREV. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Car Details - DriveAway</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background: #f4f4f4;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #2A007F;
+      color: white;
+      padding: 0.5rem 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .header-container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 60px;
+      width: 60px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin-left: 1rem;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      padding: 0.5rem;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #D9D6FF;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 6rem auto 2rem;
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+
+    .product-header {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .product-image {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .product-image img {
+      width: 100%;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .product-details {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .product-details h2 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: #2a324b;
+    }
+
+    .product-details p {
+      margin-bottom: 0.5rem;
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    .product-specs {
+      margin-top: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .product-specs li {
+      margin-bottom: 0.3rem;
+      color: #333;
+    }
+
+    .price {
+      margin-top: 1.5rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #230e81;
+    }
+
+    .book-btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 12px 20px;
+      background-color: #230e81;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+
+    .book-btn:hover {
+      background-color: #1a066b;
+    }
+
+    .description {
+      margin-top: 2rem;
+      font-size: 0.95rem;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .product-header {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo"><img src="images/RentRev.png" alt="DriveAway Logo"></a>
+      <nav>
+        <ul>
+          <li><a href="fleet.html">Vehicles</a></li>
+          <li><a href="service.html">Services</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="contactus.html">Contact</a></li>
+          <li><a href="signup.html">Sign up</a></li>
+          <li><a href="login.html">Log in</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="product-header">
+      <div class="product-image">
+        <img src="images/kia-sportage-2024.png" alt="kia-sportage-2024">
+      </div>
+      <div class="product-details">
+        <h2>Kia Sportage 2024</h2>
+        <p>Automatic · Petrol · 5 Seats · Air Conditioning</p>
+        <ul class="product-specs">
+          <li>Transmission: Automatic</li>
+          <li>Fuel Type: Diesel</li>
+          <li>Mileage: Unlimited</li>
+          <li>Seats: 5</li>
+          <li>Color: White</li>
+          <li>Pickup Location: Cairo</li>
+        </ul>
+        <p class="price">EGP 1,800 / day</p>
+        <a href="payment.html" class="book-btn">Book Now</a>
+      </div>
+    </div>
+
+    <div class="description">
+      <h3>Vehicle Description</h3>
+      <p>
+        The 2024 Kia Sportage combines comfort and performance with an automatic transmission and petrol engine.
+        Spacious interior and modern safety features make it a solid choice for city and highway travel.
+      </p>
+    </div>
+  </div>
+</body>
+</html>
